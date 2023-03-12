@@ -4,7 +4,7 @@
 	<title>stacks.fail</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+
 	<header>
 		<nav>
 			<ul>
@@ -21,6 +21,7 @@
             
 	</header>
 
+	<body>
 	<main>
 		<div class="social-links">
 			<a href="https://www.instagram.com/peroxide3e/" target="_blank">
@@ -38,7 +39,7 @@
 			<a href="https://pastebin.com/raw/6uWTCu0p" target="_blank">
 			  <img src="https://cdn0.iconfinder.com/data/icons/font-awesome-brands-vol-1/640/discord-256.png" alt="dc" height="30">
 			</a>
-			<a href="https://github.com/ja" target="_blank">
+			<a href="https://github.com/" target="_blank">
 			  <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-outline-256.png" alt="gh" height="30">
 			</a>
 			<a href="https://tryhackme.com/p/stacks" target="_blank">
@@ -137,77 +138,71 @@
 	  </style>
 </txtbox>
 
+</body>
 
 	<footer>
 
 	</footer>
 	
-<hudb>
-	<audio id="audio-player" src="THAIBOY DIGITAL SHIELD GANG MIXTAPE.mp3" autoplay loop></audio>
+	<audio id="audio-player" src="audio.mp3" loop></audio>
 
 	<div id="mute-button">
-	  <button id="audio-mute-button">Mute</button>
+	  <button id="audio-play-button">Play</button>
 	  <a href="https://www.youtube.com/watch?v=xGt-Uc8JZ-U"><img src="linkikona.png"></a>
 	</div>
 	
 	<style>
-		#mute-button {
-		  position: fixed;
-		  bottom: 10px;
-		  right: 10px;
-		  display: flex;
-		  align-items: center;
-		  justify-content: center;
-		  z-index: 1000;
-		}
-	  
-		#audio-mute-button {
-		  background-color: black;
-		  color: white;
-		  border: none;
-		  border-radius: 50%;
-		  padding: 10px;
-		  margin-right: 10px;
-		  cursor: pointer;
-		  transition: background-color 0.3s;
-		}
-	  
-		#audio-mute-button:hover {
-		  background-color: white;
-		  color: black;
-		}
-	  
-		#audio-mute-button:focus {
-		  outline: none;
-		}
-	  
-		#audio-mute-button:active {
-		  transform: scale(0.9);
-		}
-	  </style>
-
-<script>
-  var audio = document.getElementById("audio-player");
-  var muteButton = document.getElementById("audio-mute-button");
-
-  function playAudio() {
-    audio.volume = 0.2;
-    audio.play();
-  }
-  
-	muteButton.addEventListener("click", function() {
-	  if (audio.volume > 0) {
-		audio.volume = 0;
-		muteButton.textContent = "Unmute";
-	  } else {
-		audio.volume = 0.2;
-		muteButton.textContent = "Mute";
+	  #mute-button {
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 1000;
 	  }
-	});
-  
-	window.addEventListener("load", playAudio);
-  </script>
-</hudb>
+	  
+	  #audio-mute-button, #audio-play-button {
+		background-color: black;
+		color: white;
+		border: none;
+		border-radius: 35%;
+		padding: 10px;
+		margin-right: 10px;
+		cursor: pointer;
+		transition: background-color 0.3s;
+	  }
+	
+	  #audio-mute-button:hover, #audio-play-button:hover {
+		background-color: white;
+		color: black;
+	  }
+	
+	  #audio-mute-button:focus, #audio-play-button:focus {
+		outline: none;
+	  }
+	
+	  #audio-mute-button:active, #audio-play-button:active {
+		transform: scale(0.9);
+	  }
+	</style>
+	
+	<script>
+	  var audio = document.getElementById("audio-player");
+	  audio.volume = 0.2;
+	
+	
+	  document.getElementById("audio-play-button").addEventListener("click", function() {
+		if (audio.paused) {
+		  audio.play();
+		  document.getElementById("audio-play-button").innerHTML = "Pause";
+		} else {
+		  audio.pause();
+		  document.getElementById("audio-play-button").innerHTML = "Play";
+		}
+	  });
+	</script>
+	
 
-</body>
+
 </html>
