@@ -1,0 +1,57 @@
+  <head>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>simple username & password generator</h1>
+    </header>
+    <main>
+        <h2>Password Generator</h2>
+        <div class="form-group">
+          <label for="passwordlength">Length:</label>
+          <input type="number" id="passwordLength" value="8" min="4" max="64" />
+        </div>  
+        <div class="form-group">
+          <label for="passwordIncludeLetters">Include Letters:</label>
+          <input type="checkbox" id="passwordIncludeLetters" checked />
+        </div>
+        <div class="form-group">
+          <label for="passwordIncludeDigits">Include Digits:</label>
+          <input type="checkbox" id="passwordIncludeDigits" checked />
+        </div>
+        <div class="form-group">
+          <label for="passwordIncludeSymbols">Include Symbols:</label>
+          <input type="checkbox" id="passwordIncludeSymbols" checked />
+        </div>
+        <div class="form-group">
+          <button id="generatePasswordBtn">Generate Password</button>
+          <button id="copyPasswordBtn">Copy Password</button>
+        </div>
+        <div class="password-output">
+          <textarea id="passwordOUT" rows="3"></textarea>
+        </div>
+
+        <h2>Username generator</h2>
+        <div class="form-group">
+          <label for="usernameType">Options:</label>
+          <select id="usernameType">
+            <option value="adjective+number">Adjective + Number</option>
+            <option value="noun+number">Noun + Number</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button id="generateUsernameBtn">Generate Username</button>
+          <button id="copyUsernameBtn">Copy Username</button>
+        </div>
+        <div class="username-output">
+          <textarea id="usernameOUT" rows="3"></textarea>
+        </div>
+    </main>
+
+<footer>&copy 2023 | stacks.fail</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+  
